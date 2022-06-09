@@ -4,7 +4,7 @@ export default function Item({ item: i }) {
   const [item, setItem] = useState(i);
 
   const toggle = () => {
-    fetch(`${process.env.REACT_APP_BACKEND_API_URI}/items/${item.id}`, {
+    fetch(`https://62a1636dcc8c0118ef4a8dfc.mockapi.io/items/${item.id}`, {
       method: "PUT",
       headers: {
         "Content-Type" : "application/json",
@@ -25,7 +25,7 @@ export default function Item({ item: i }) {
 
   const deleteItem = () => {
     if(window.confirm("삭제 하시겠습니까?")) {
-      fetch(`http://localhost:3001/items/${item.id}`, {
+      fetch(`https://62a1636dcc8c0118ef4a8dfc.mockapi.io/items/${item.id}`, {
         method: "DELETE"
       }).then((res)=>{
         if(res.ok){

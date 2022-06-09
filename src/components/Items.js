@@ -5,7 +5,7 @@ export default function Items({endpoint =""}) {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_BACKEND_API_URI}/items${endpoint}`)
+    fetch(`https://62a1636dcc8c0118ef4a8dfc.mockapi.io/items${endpoint}`)
       .then((res) => {
         return res.json();
       })

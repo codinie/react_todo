@@ -31,7 +31,7 @@ export default function CreateItem() {
   const onSubmit = (event) => {
     event.preventDefault();
 
-    fetch(`${process.env.REACT_APP_BACKEND_API_URI}/items`, {
+    fetch(`https://62a1636dcc8c0118ef4a8dfc.mockapi.io/items`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -44,7 +44,7 @@ export default function CreateItem() {
     }).then((res) => {
         if(res.ok){
             alert("Created new item!");
-            navigate("/todo");
+            navigate("/");
         }
     });
   };
